@@ -1,0 +1,36 @@
+{
+  "presets": [
+    "es2017",
+    "es2015",
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-object-rest-spread",
+    "transform-export-extensions",
+    [
+      "inline-react-svg",
+      {
+        "svgo": {
+          "plugins": [
+            {
+              "cleanupIDs": false,
+              "removeTitle": true,
+              "removeUnknownsAndDefaults": false,
+              "removeAttrs": {
+                "attrs": "(data-name)"
+              }
+            },
+            {
+              "removeTitle": true,
+              "cleanupIDs": false,
+              "convertStyleToAttrs": false,
+              "removeUnknownsAndDefaults": false
+            }
+          ]
+        }
+      }
+    ]
+  ]
+}
